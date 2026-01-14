@@ -18,7 +18,6 @@ class Tree:
         """
         return cls(TreeNode.random_binary_tree(0, n-1))
 
-
 class TreeNode:
     """
     Defines a TreeNode for use in a Tree. The value stored can be flexible (int, str, e.t.c.)
@@ -84,7 +83,17 @@ class TreeNode:
             children.append(cls.random_binary_tree(val+1, m))
         return cls(val, children)
 
+# Sample trees
+SAMPLE_TREE_1 = Tree(
+    TreeNode(3, [
+        TreeNode(5, [
+            TreeNode(4), 
+            TreeNode(3)]),
+        TreeNode(1)]))
+
 def main():
+    print("Sample tree 1: ")
+    print(SAMPLE_TREE_1)
     print(Tree.random_binary_tree(10))
 
 if __name__ == '__main__':
